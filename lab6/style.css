@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+body{
+    font-family: 'DM Sans', sans-serif; 
+}
+img{
+    width: auto;
+}
+.container{
+    width: 100%;
+    padding: 50px 0;
+    position: center;
+}
+.onLine{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.onLinePrice{
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+.onLinePrice h3{
+    font-size: 60px;
+}
+.spaceContent{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.alignContentCenter{
+    text-align: center;
+}
+.align-center{
+    align-items: center !;
+    display: flex;
+}
+.menu{
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+.button{
+    padding: 19px 56px;
+    background-color: #ff7143;
+    border-radius: 15px;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.button:hover{
+    padding: 19px 56px;
+    background-color: #5454D4;
+    border-radius: 15px;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.buttonLearn{
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.531474px;
+    color: #5454D4;
+    width: 18%;
+    border: none;
+    text-align: left;
+    background-color: #ffffff00;
+    padding: 0px;
+}
+.buttonLearn:hover{
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.531474px;
+    color: #ff7143;
+    width: 18%;
+    border: none;
+    text-align: left;
+    background-color: #ffffff00;
+    text-decoration: underline;
+    padding: 0px;
+}
+.buttonTime{
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: -0.5px;
+    color: #fff;
+    width: 22%;
+    border: none;
+    text-align: center;
+    background-color: #5454D4;
+    padding: 0px;
+    padding: 19px 50px;
+    border-radius: 10px 0 0 10px;
+}
+.buttonTime2{
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: -0.5px;
+    color: #000000;
+    width: 22%;
+    border: none;
+    text-align: center;
+    background-color: #F7F7FB;
+    padding: 0px;
+    padding: 19px 50px;
+    border-radius: 0 10px 10px 0;
+}
+.buttonTablePrice{
+    padding: 19px 56px;
+    background-color: #fff;
+    border-radius: 15px;
+    color:#5454D4;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.buttonTablePrice:hover{
+    padding: 19px 56px;
+    background-color: #ff7143;
+    border-radius: 15px;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.buttonTablePriceS{
+    padding: 19px 56px;
+    background-color: #9F3919;
+    border-radius: 15px;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.buttonTablePriceS:hover{
+    padding: 19px 56px;
+    background-color: #9F3919;
+    border-radius: 15px;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+.container-2{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.col-1{
+    width: 40%;
+}
+.col-1 p{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.625263px;
+    color: #696871;
+}
+.col-1 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.col-2{
+    width: 40%;
+}
+.col-2 p{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.625263px;
+    color: #696871;
+}
+.col-2 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: 80px;
+    line-height: 77px;
+    letter-spacing: -2.50105px;
+    color: #19191B;
+}
+h2{
+    font-size: 50px;
+    line-height: 57px;
+}
+h3{
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.7503160238265991px;
+}
+.arrowB{
+    background-color: #ff7143; 
+    color: #000; 
+    border: 1px #696871 solid;
+    border-radius: 20px;
+    padding: 20px 20px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    background: url(images/arrow-down.svg) no-repeat;
+    position: absolute;
+    background-position: center;
+    left: 30.68%;
+}
+.arrowB:hover {
+    background-color: RoyalBlue;
+    color:#ff7143;
+}
+.pad-1{
+    padding: 0 50px;
+}
+.padRcontent{
+    padding-right: 50px;
+}
+.padLcontent{
+    padding-left: 50px;
+}
+.padContent p{
+    padding-right: 32%;
+}
+.content{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding:50px 0px;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+.service{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #696871;
+}
+.service img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.service img{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.optionTime{
+    width: 50%;
+}
+.flexEnd{
+    justify-content:flex-end;
+    display: flex;
+}
+.tablePrice{
+    background-color: #F8F8F8;
+    padding: 50px 30px;
+    margin:15px;
+    width: 33%;
+    border-radius: 10px;
+}
+.tablePriceS{
+    background-color: #ff7143;
+    padding: 70px 30px;
+    margin:15px;
+    color: #fff;
+    width: 33%;
+    border-radius: 10px;
+}
