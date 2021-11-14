@@ -93,6 +93,7 @@ input::placeholder {
 .btn-item {
     display: inline-block;
     margin: 20px 5px 0;
+    z-index: 10;
 }
 button {
     width: 100%;
@@ -151,15 +152,14 @@ th{
 }
 /*Hiệu ứng chữ*/
 .content {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    height: 160px;
-    overflow: hidden;
+    position: fixed;
+    height: 40px;
+    margin-top: -4%;
     font-size: 35px;
     line-height: 40px;
     color: #ecf0f1;
+    width: fit-content;
+    margin-left: 10%;
   }
   .content__container {
     font-weight: 600;
