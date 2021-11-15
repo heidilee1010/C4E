@@ -20,31 +20,31 @@
 
 // Button
 const arr=[{
-        name : "a",
+        name : "Đỗ Văn A",
         age : 12,
         add : "Hà Nội",
         mark: 9,
     },
     {
-        name: "b",
+        name: "Nguyễn Văn B",
         age: 23,
-        add: "SGon",
+        add: "Hồ Chí Minh",
         mark: 8,
     },
     {
-        name: "d",
+        name: "Michael Myers",
         age: 15,
-        add: "Da Nang",
+        add: "Đà Nẵng",
         mark: 7,
     },
     {
-        name: "f",
+        name: "Only C",
         age: 16,
         add: "Ca Mau",
         mark: 7,
     },
     {
-        name: "c",
+        name: "Bean",
         age: 19,
         add: "Nha Trang",
         mark: 7,
@@ -73,41 +73,72 @@ arr.push({
 console.log({ arr });
 alert("Bạn đã thêm thành công");
 });
-//Tìm tuổi cao nhất trong mảng//
-const btnSearchAge = document.querySelector(".btn-search-highest-age");
-
-btnSearchAge.addEventListener("click", () => {
-let studentHighestAge = arr[0];
-
-for (let i = 1; i < arr.length; i++) {
-    const element = arr[i];
-    if (studentHighestAge.age < element.age) {
-        studentHighestAge = element;
-    }
-}
-
-const highAge = document.querySelector(".highest-age");
-const divContainer = document.createElement("tr");
-sortedContainer.appendChild(divContainer);
-divContainer.innerHTML = `
-    <td>${studentHighestAge.name}</td>
-    <td>${studentHighestAge.age}</td>
-    <td>${studentHighestAge.add}</td>
-    <td>${studentHighestAge.mark}</td>
+//In dữ liệu ban đầu
+const btnTemp = document.querySelector(".sortedTemp");;
+    btnTemp.innerHTML = `
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Địa chỉ</th>
+        <th>Số điểm</th>  
     `;
-});
+
+const sortedContainer = document.querySelector(".sortedList");
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        const divContainer = document.createElement("tr");
+        sortedContainer.appendChild(divContainer);
+        divContainer.innerHTML = `
+            <td>${element.name}</td>
+            <td>${element.age}</td>
+            <td>${element.add}</td>
+            <td>${element.mark}</td>   
+        `;
+    }
+;
+                    
+
+// //Tìm tuổi cao nhất trong mảng//
+const btnSearchAge = document.querySelector(".btn-search-highest-age");
+btnSearchAge.addEventListener("click", () => {
+    let last = sortedContainer.lastElementChild;
+    while(last){
+        sortedContainer.removeChild(last);
+        last=sortedContainer.lastElementChild;
+    }
+    let studentHighestAge = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        const element = arr[i];
+        if (studentHighestAge.age < element.age) {
+            studentHighestAge = element;
+        }
+    }
+    const divContainer = document.createElement("tr");
+    sortedContainer.appendChild(divContainer);
+    divContainer.innerHTML = `
+        <td>${studentHighestAge.name}</td>
+        <td>${studentHighestAge.age}</td>
+        <td>${studentHighestAge.add}</td>
+        <td>${studentHighestAge.mark}</td>
+    `;
+    }
+);
+
 
 //Tìm người có số điểm cao nhất
 const btnSearchmark = document.querySelector(".btn-search-highest-mark");
 btnSearchmark.addEventListener("click", () => {
-let studentHighestmark = arr[0];
-
-for (let i = 1; i < arr.length; i++) {
-    const element = arr[i];
-    if (studentHighestmark.mark < element.mark) {
-        studentHighestmark = element;
+    let last = sortedContainer.lastElementChild;
+    while(last){
+        sortedContainer.removeChild(last);
+        last=sortedContainer.lastElementChild;
     }
-}
+    let studentHighestmark = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        const element = arr[i];
+        if (studentHighestmark.mark < element.mark) {
+            studentHighestmark = element;
+        }
+    }
 
 const highMark = document.querySelector(".highest-mark");
 const divContainer = document.createElement("tr");
@@ -121,7 +152,6 @@ divContainer.innerHTML = `
 });
 
 //Sắp xếp học viên
-const sortedContainer = document.querySelector(".sortedList");
 arr.sort(function compare(a, b) {
 if (a.name < b.name) {
     return -1;
@@ -132,10 +162,15 @@ if (a.name > b.name) {
 return 0;
 });
 //Đọc trả dữ liệu
-const btnSorted = document.querySelector(".btn-sorted");
 
+const btnSorted = document.querySelector(".btn-sorted");
 btnSorted.addEventListener("click", () => {
-for (let i = 0; i < arr.length; i++) {
+    let last = sortedContainer.lastElementChild;
+    while(last){
+    sortedContainer.removeChild(last);
+    last=sortedContainer.lastElementChild;
+    }
+    for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     const divContainer = document.createElement("tr");
     sortedContainer.appendChild(divContainer);
@@ -145,33 +180,57 @@ for (let i = 0; i < arr.length; i++) {
         <td>${element.add}</td>
         <td>${element.mark}</td>   
     `;
-}
+    }
 });
 
 //Tìm kiếm địa chỉ theo tìm kiếm
+
 const btnFind = document.querySelector(".btn-find");
 
-btnFind.addEventListener("click", () => {
-let find=prompt("Bạn tìm địa chỉ ở: ");
-    for(i=0; i < arr.length; i++){
-    const element = arr[i];
-    if (element.add==find){
-        for (i of arr){
-            if (find===i.add){
-                const divContainer = document.createElement("tr");
-                sortedContainer.appendChild(divContainer);
-                divContainer.innerHTML = `
-                    <td>${element.name}</td>
-                    <td>${element.age}</td>
-                    <td>${element.add}</td>
-                    <td>${element.mark}</td>  
-                `;
-            }
-        }
-        break;
-    }else{
-        console.log ("Thông tin không tìm thấy");
-        break;
+btnFind.addEventListener("input",(event)=>{
+    let last = sortedContainer.lastElementChild;
+    while(last){
+    sortedContainer.removeChild(last);
+    };
+   
+    const value=event.target.value;
+    const ex=[...arr].filter((arr)=>
+        arr.add.includes(value)   
+    );
+    for (let i = 0; i < ex.length; i++) {
+        const element = ex[i];
+        const divContainer = document.createElement("tr");
+        sortedContainer.appendChild(divContainer);
+        divContainer.innerHTML = `
+            <td>${element.name}</td>
+            <td>${element.age}</td>
+            <td>${element.add}</td>
+            <td>${element.mark}</td>   
+        `;
     }
-}
 });
+
+// })
+// btnFind.addEventListener("click", () => {
+//     for(i=0; i < arr.length; i++){
+//     const element = arr[i];
+//     if (element.add==find){
+//         for (i of arr){
+//             if (find===i.add){
+//                 const divContainer = document.createElement("tr");
+//                 sortedContainer.appendChild(divContainer);
+//                 divContainer.innerHTML = `
+//                     <td>${element.name}</td>
+//                     <td>${element.age}</td>
+//                     <td>${element.add}</td>
+//                     <td>${element.mark}</td>  
+//                 `;
+//             }
+//         }
+//         break;
+//     }else{
+//         console.log ("Thông tin không tìm thấy");
+//         break;
+//     }
+// }
+// });

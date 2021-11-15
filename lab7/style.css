@@ -133,6 +133,7 @@ td{
     padding: 15px;
     text-align: left;
     background-color: rgb(28 5 10 / 68%);
+    border: #fff 0.5px solid;
 }
 th{
     padding: 10px;
@@ -150,9 +151,34 @@ th{
 .p-1{
     padding: 20px;
 }
+td:first-child{
+  width: 25%;
+}
+td:nth-child(2){
+  width: 10%;
+}
+td:nth-child(3){
+  width: 50%;
+}
+td:nth-child(4){
+  width: 15%;
+}
+
+th:first-child{
+  width: 25%;
+}
+th:nth-child(2){
+  width: 10%;
+}
+th:nth-child(3){
+  width: 50%;
+}
+th:nth-child(4){
+  width: 15%;
+}
 /*Hiệu ứng chữ*/
 .content {
-    position: fixed;
+    position: absolute;
     height: 40px;
     margin-top: -4%;
     font-size: 35px;
