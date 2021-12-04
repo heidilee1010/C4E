@@ -48,6 +48,9 @@ img{
     align-items: center;
     padding: 0 50px;
 }
+.header-btn{
+    color: #fff;
+}
 .button{
     padding: 19px 56px;
     background-color: #ff7143;
