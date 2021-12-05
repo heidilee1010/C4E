@@ -586,17 +586,6 @@ a:hover {
 .items-active button.slick-prev {
     left: -40px;
 }
-.items-active button.slick-arrow {
-    position: absolute;
-    border: 0;
-    padding: 0;
-    z-index: 2;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-    left: auto;
-    background: none;
-}
 .items-active button.slick-prev {
     left: -10px;
 }
@@ -630,7 +619,7 @@ a:hover {
     height: 100%;
     min-height: 1px;
 }
-.our-client .single-cat {
+.single-cat {
     -webkit-transition: all .4s ease-out 0s;
     -moz-transition: all .4s ease-out 0s;
     -ms-transition: all .4s ease-out 0s;
@@ -642,3 +631,104 @@ a:hover {
     border-radius: 10px;
     margin: 0 12px;
 }
+.single-cat .cat-img {
+    position: relative;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.single-cat .cat-img img {
+    margin: 0 auto;
+    transform: scale(1);
+    -webkit-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    -ms-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+    border-radius: 50%;
+}
+.single-cat .cat-img .numbering {
+    color: #fff;
+    position: absolute;
+    background: #FE5F41;
+    width: 59px;
+    height: 59px;
+    line-height: 59px;
+    bottom: 20px;
+    border-radius: 50%;
+    right: 37px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Mitr",sans-serif;
+}
+.section-img-bg2 {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.single-cat .cat-cap h5>a{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: block;
+    -webkit-transition: all .2s ease-out 0s;
+    -moz-transition: all .2s ease-out 0s;
+    -ms-transition: all .2s ease-out 0s;
+    -o-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s;
+    text-transform: capitalize;
+    color: #000000;
+}
+.single-cat .cat-cap p {
+    -webkit-transition: all .2s ease-out 0s;
+    -moz-transition: all .2s ease-out 0s;
+    -ms-transition: all .2s ease-out 0s;
+    -o-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s;
+    color: #94817E;
+    font-size: 16px;
+    margin-bottom: 34px;
+}
+.single-cat .cat-cap a {
+    color: #1c165c;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-transition: all .2s ease-out 0s;
+    -moz-transition: all .2s ease-out 0s;
+    -ms-transition: all .2s ease-out 0s;
+    -o-transition: all .2s ease-out 0s;
+    transition: all .2s ease-out 0s;
+}
+.browse-btn {
+    color: #FE5F41 !important;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+.btn-color{
+    color:#fe5f41
+}
+.btn-color:hover{
+    color: #4d312c;
+}
+.uk-child-width-1-4\@m>* {
+    width: 23% !important;
+}
+/* Tamj thoiwf */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  .tabcontent {
+    display: none;}
